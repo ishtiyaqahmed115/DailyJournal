@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<%- include("Partials/header.ejs") %> 
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Home</h1>
+        <p><%= homeContent %> </p>
+
+        <% postArray.forEach(post => { %> 
+            <h1><%= post.postTitle; %> </h1>
+            <p><%= post.postBody.substring(0, 100) + "..."; %> </p>
+            <a href="/posts/<%= post.postTitle %>  ">Read More</a>  
+        <% }); %>   
+        <script src="" async defer></script>
+    </body>
+
+<%- include("Partials/footer.ejs") %> 
+   
+</html>
